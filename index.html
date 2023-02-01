@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="weatherContainer">
+            <div class="weatherContainer__left">
+                <div class="enterYourCityContainer">
+                    <input id="yourCityInp" placeholder="Your city" type="text" class="yourCityInp">
+                    <button id="searchBtn" class="sBtn">Search</button>
+                </div>
+                <div class="yourCountry">
+                    <span id="country">Country</span>
+                    <div id="flag" class="flag"></div>
+                </div>
+                <div class="weatherStatusAndTemp">
+                    <div id="weatherStausIcon" class="weatherStausIcon"></div>
+                    <div>
+                        <div id="temp">--</div>
+                        <span class="cel">°C</span>
+                    </div>
+                </div>
+                <span id="weatherStatus" class="weatherStatus">---</span>
+                <div class="more">
+                    <div class="humididtyContainer">
+                        <span>Humidity</span>
+                        <span class="data" id="humidity">---</span>
+                    </div>
+                    <div class="windSpeedContainer">
+                        <span>Wind speed</span>
+                        <span class="data" id="windSpeed">---</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weatherContainer__right">
+                <div class="weatherChart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="anotherDays">
+                    <div class="anotherDayCard anotherDayCard__Selected">
+                        <span class="day">Today</span>
+                        <div class="anotherDayCard__weatherStatus"></div>
+                        <div class="humidity">
+                            <span>Humidity</span>
+                            <span>36%</span>
+                        </div>
+                    </div>
+                    <div class="anotherDayCard">
+                        <span class="day">Jan 25</span>
+                        <div class="anotherDayCard__weatherStatus"></div>
+                        <div class="humidity">
+                            <span>Humidity</span>
+                            <span>36%</span>
+                        </div>
+                    </div>
+                    <div class="anotherDayCard">
+                        <span class="day">Jan 26</span>
+                        <div class="anotherDayCard__weatherStatus"></div>
+                        <div class="humidity">
+                            <span>Humidity</span>
+                            <span>36%</span>
+                        </div>
+                    </div>
+                    <div class="anotherDayCard">
+                        <span class="day">Jan 27</span>
+                        <div class="anotherDayCard__weatherStatus"></div>
+                        <div class="humidity">
+                            <span>Humidity</span>
+                            <span>36%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
